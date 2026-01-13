@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { Leaf, Droplets, CheckCircle, FlaskConical } from "lucide-react";
+import { Leaf, CheckCircle, Droplets } from "lucide-react";
 
 export default function Composition() {
   const mainFeatures = {
@@ -25,47 +25,35 @@ export default function Composition() {
 
   return (
     <section
-      className="w-full py-5 bg-[#F8FAF8] overflow-hidden"
+      className="w-full py-6 bg-[#F8FAF8] overflow-hidden"
       id="composition"
     >
       <div className="max-w-[1100px] mx-auto px-4">
-        {/* Sarlavha - ParazitOff uslubida */}
+        {/* SARLAVHA */}
         <div className="text-center mb-16">
-          <div className="flex items-center justify-center gap-2 mb-4">
-            <FlaskConical className="text-[#8BC34A] w-6 h-6" />
-            <span className="text-[#004D40] font-black text-xs uppercase tracking-[4px]">
-              Labaratoriya tekshiruvi
-            </span>
-          </div>
           <h2 className="text-[#004D40] text-3xl md:text-5xl font-[1000] italic leading-tight uppercase tracking-tighter">
             TABIIY VA KUCHLI
             <span className="text-[#8BC34A]"> TARKIB</span>
           </h2>
           <p className="text-slate-500 font-bold mt-4 uppercase text-[10px] md:text-xs tracking-[2px] max-w-2xl mx-auto leading-relaxed">
             ParazitOff — Bu faqat tabiiy komponentlardan tashkil topgan majmua
-            bo'lib, unda har bir tomchi organizmning ichki tozaligi uchun xizmat
-            qiladi.
+            bo'lib, har bir tomchi ichki tozalik uchun xizmat qiladi.
           </p>
         </div>
 
-        <div className="relative flex flex-col lg:flex-row items-center justify-between gap-12">
-          {/* 1-Karta: Ta'sir doirasi */}
-          <div className="w-full lg:w-[380px] bg-white rounded-[40px] p-8 md:p-10 shadow-[0_20px_50px_rgba(0,77,64,0.05)] border border-green-50 relative z-10 transition-all duration-500 hover:-translate-y-2 group">
-            <div className="mb-8">
-              <h3 className="text-[#8BC34A] text-2xl font-black uppercase italic group-hover:tracking-widest transition-all">
-                ASOSIY
-              </h3>
-              <p className="text-[10px] text-slate-400 font-bold uppercase tracking-widest mt-1">
-                FOYDALI XUSUSIYATLARI
-              </p>
-              <div className="h-1 w-12 bg-[#004D40] mt-2 rounded-full" />
-            </div>
+        <div className="relative flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-6">
+          {/* 1-KARTA: TA'SIR DOIRASI */}
+          <div className="w-full lg:w-[340px] bg-white rounded-[40px] p-8 md:p-10 shadow-[0_20px_50px_rgba(0,77,64,0.05)] border border-green-50 relative z-30 transition-all duration-500 hover:-translate-y-2 group">
+            <h3 className="text-[#8BC34A] text-2xl font-black uppercase italic">
+              ASOSIY
+            </h3>
+            <p className="text-[10px] text-slate-400 font-bold uppercase tracking-widest mt-1 mb-6">
+              FOYDALI XUSUSIYATLARI
+            </p>
             <ul className="space-y-6">
               {mainFeatures.benefits.map((item, i) => (
                 <li key={i} className="flex items-start gap-3">
-                  <div className="w-5 h-5 rounded-full bg-green-50 flex items-center justify-center shrink-0 mt-0.5">
-                    <CheckCircle className="w-4 h-4 text-[#8BC34A]" />
-                  </div>
+                  <CheckCircle className="w-5 h-5 text-[#8BC34A] shrink-0 mt-0.5" />
                   <p className="text-[#004D40] text-[13px] font-black leading-snug uppercase">
                     {item}
                   </p>
@@ -74,33 +62,42 @@ export default function Composition() {
             </ul>
           </div>
 
-          {/* MARKAZIY QISM: Vizual element */}
-          <div className="flex flex-col items-center gap-10 z-20">
-            <div className="w-56 h-56 md:w-72 md:h-72 relative group">
-              {/* Orqa fondagi aylanuvchi yashil nur */}
-              <div className="absolute inset-0 bg-gradient-to-tr from-[#8BC34A]/20 to-transparent rounded-full animate-spin-slow" />
+          {/* MARKAZIY QISM: Rasm ko'rinishi uchun to'liq to'g'rilangan blok */}
+          <div className="flex flex-col items-center gap-10 z-10">
+            {/* Rasm Konteyneri */}
+            <div className="relative w-64 h-64 md:w-80 md:h-80">
+              {/* Orqa fondagi aylanuvchi va pulsatsiyalanuvchi effektlar */}
+              <div className="absolute inset-0 bg-[#8BC34A]/10 rounded-full blur-3xl animate-pulse" />
+              <div className="absolute inset-0 border-2 border-dashed border-[#8BC34A]/30 rounded-full animate-[spin_15s_linear_infinite]" />
 
-              <div className="absolute inset-4 bg-white rounded-full shadow-2xl flex items-center justify-center p-4 border-[10px] border-slate-50 relative overflow-hidden">
-                <Image
-                  src="/parazitoff-drops.png" // Bu yerda tomchi yoki mahsulot rasmi
-                  alt="ParazitOff Formula"
-                  fill
-                  className="object-contain p-6 group-hover:scale-110 transition-transform duration-700"
-                />
+              {/* Rasmning o'zi */}
+              <div className="relative w-full h-full flex items-center justify-center">
+                <div className="relative w-[90%] h-[90%] transition-transform duration-700 hover:scale-110">
+                  <Image
+                    src="/center.png"
+                    alt="ParazitOff Center"
+                    fill
+                    className="object-contain"
+                    priority
+                    sizes="(max-width: 768px) 256px, 320px"
+                  />
+                </div>
               </div>
+
+          
             </div>
 
-            {/* Quick Stats Grid */}
-            <div className="grid grid-cols-2 gap-4 w-full max-w-[420px]">
+            {/* Pastki Grid - kichik statlar */}
+            <div className="grid grid-cols-2 gap-3 w-full max-w-[400px]">
               {formulaData.map((m, idx) => (
                 <div
                   key={idx}
-                  className="bg-white p-5 rounded-[25px] border border-green-50 shadow-sm text-center hover:shadow-md transition-shadow group/item"
+                  className="bg-white p-4 rounded-[22px] border border-green-50 shadow-sm text-center hover:bg-green-50 transition-colors"
                 >
-                  <h4 className="text-[#8BC34A] font-black text-[11px] uppercase mb-1 tracking-wider group-hover/item:text-[#004D40] transition-colors">
+                  <h4 className="text-[#8BC34A] font-black text-[10px] uppercase mb-1">
                     {m.name}
                   </h4>
-                  <p className="text-[10px] text-slate-400 font-bold uppercase">
+                  <p className="text-[9px] text-slate-400 font-bold uppercase">
                     {m.desc}
                   </p>
                 </div>
@@ -108,23 +105,18 @@ export default function Composition() {
             </div>
           </div>
 
-          {/* 2-Karta: Komponentlar */}
-          <div className="w-full lg:w-[380px] bg-[#004D40] rounded-[40px] p-8 md:p-10 shadow-2xl shadow-green-900/20 relative z-10 transition-all duration-500 hover:-translate-y-2 group">
-            <div className="mb-8">
-              <h3 className="text-[#8BC34A] text-2xl font-black uppercase italic">
-                KOMPONENTLAR
-              </h3>
-              <p className="text-[10px] text-white/40 font-bold uppercase tracking-widest mt-1 leading-relaxed">
-                EFIR MOYLARI VA O'SIMLIK EKSTRAKTLARI MAJMUASI
-              </p>
-              <div className="h-1 w-12 bg-[#8BC34A] mt-2 rounded-full" />
-            </div>
+          {/* 2-KARTA: KOMPONENTLAR */}
+          <div className="w-full lg:w-[340px] bg-[#004D40] rounded-[40px] p-8 md:p-10 shadow-2xl shadow-green-900/20 relative z-30 transition-all duration-500 hover:-translate-y-2 group">
+            <h3 className="text-[#8BC34A] text-2xl font-black uppercase italic">
+              KOMPONENTLAR
+            </h3>
+            <p className="text-[10px] text-white/40 font-bold uppercase tracking-widest mt-1 mb-6">
+              EKSTRAKTLAR MAJMUASI
+            </p>
             <ul className="space-y-6">
               {mainFeatures.components.map((item, i) => (
                 <li key={i} className="flex items-start gap-3">
-                  <div className="w-5 h-5 rounded-full bg-white/10 flex items-center justify-center shrink-0 mt-0.5">
-                    <Leaf className="w-3 h-3 text-[#8BC34A]" />
-                  </div>
+                  <Leaf className="w-5 h-5 text-[#8BC34A] shrink-0 mt-0.5" />
                   <p className="text-white text-[13px] font-black leading-snug uppercase italic">
                     {item}
                   </p>

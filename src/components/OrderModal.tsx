@@ -19,7 +19,7 @@ export default function OrderModal({ isOpen, onClose }: OrderModalProps) {
   const [showError, setShowError] = useState(false);
 
   const API_URL = `${
-    process.env.NEXT_PUBLIC_API_URL || "https://api.example.com"
+    process.env.NEXT_PUBLIC_API_URL 
   }/leads/`;
 
   const progress =

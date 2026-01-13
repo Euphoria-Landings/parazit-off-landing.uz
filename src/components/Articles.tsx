@@ -12,21 +12,21 @@ export default function Articles() {
       title: "Organizmni tozalashning 5 belgisi",
       description:
         "Parazitlar organizmdan chiqib ketayotganini qanday bilish mumkin? Terining holati va uyqu sifati yaxshilanishi haqida.",
-      imgSrc: "/health-detox.jpg",
+      imgSrc: "/rasm1.png",
       category: "Detoks",
     },
     {
       title: "Shuvoq (Artemisia) siri",
       description:
         "Nega qadimdan shuvoq o'simligi gelmintlarga qarshi eng kuchli vosita hisoblangan? ParazitOff tarkibidagi 25% kontsentrat kuchi.",
-      imgSrc: "/artemisia-blog.jpg",
+      imgSrc: "/rasm2.png",
       category: "Tarkib",
     },
     {
       title: "Sog'lom ichak - sog'lom hayot",
       description:
         "Ichak mikroflorasini tiklash orqali immunitetni qanday ko'tarish mumkin? Kursdan so'ng parhez bo'yicha maslahatlar.",
-      imgSrc: "/gut-health.jpg",
+      imgSrc: "/rasm3.png",
       category: "Sog'lik",
     },
   ];

@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import dynamic from "next/dynamic";
-import { Leaf, ShieldCheck, Droplets } from "lucide-react";
+import { ShieldCheck, Droplets } from "lucide-react";
 
 const OrderModal = dynamic(() => import("./OrderModal"), { ssr: false });
 
@@ -10,112 +10,109 @@ export default function ParazitOffIntro() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <section className="relative w-full overflow-hidden bg-[#F8FAF8] mt-[70px] md:mt-[100px] pb-12 md:pb-20">
-      {/* Orqa fondagi yashil dekorativ elementlar */}
-      <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-green-50 to-transparent opacity-80 z-0" />
-      <div className="absolute -top-24 -left-24 w-96 h-96 bg-green-100/50 rounded-full blur-3xl z-0" />
+    <section className="relative w-full overflow-hidden bg-white mt-[60px] md:mt-[70px]">
+      {/* Orqa fondagi yashil gradient */}
+      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-green-50 to-transparent opacity-60 z-0" />
 
-      <div className="max-w-[1200px] mx-auto px-4 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-8">
+      <div className="max-w-[1100px] mx-auto px-4 relative z-10">
+        <div className="flex flex-col md:flex-row items-center min-h-[450px] md:min-h-[580px] py-8 md:py-14">
           {/* --- CHAP TOMON: MATNLAR --- */}
-          <div className="w-full lg:w-[55%] flex flex-col items-start text-left space-y-6 md:space-y-8">
-            {/* Kichik sarlavha */}
-            <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm border border-green-100">
-              <ShieldCheck className="text-[#004D40] w-4 h-4 md:w-5 md:h-5" />
-              <span className="text-[#004D40] font-black text-[9px] md:text-[11px] uppercase tracking-[2px]">
-                O'zbekistonda sertifikatlangan
-              </span>
-            </div>
+          <div className="w-full md:w-[55%] flex flex-col items-start text-left">
+            <div className="relative mb-4 md:mb-6">
+              <div className="flex items-center gap-2 mb-4 bg-green-50 px-3 py-1.5 rounded-full border border-green-100">
+                <ShieldCheck className="text-[#004D40]" size={14} />
+                <span className="text-[9px] font-black uppercase tracking-[2px] text-[#004D40]">
+                  Sertifikatlangan mahsulot
+                </span>
+              </div>
 
-            {/* Asosiy Sarlavha */}
-            <div className="space-y-2">
-              <h1 className="flex items-center text-4xl md:text-[65px] font-[1000] tracking-tighter leading-none select-none uppercase">
-                <span className="text-[#004D40]">Parazit</span>
-                <span className="text-[#8BC34A] italic ml-1">OFF</span>
-              
+              <h1 className="text-[42px] md:text-[68px] font-black italic leading-[0.9] tracking-tighter text-[#1A1A1A] uppercase">
+                PARAZIT<span className="text-[#8BC34A]">OFF</span>
               </h1>
-              <h2 className="text-[22px] md:text-[38px] font-extrabold leading-tight text-slate-700 tracking-tight">
-                Gelmintlarga qarshi <br className="hidden md:block" />
-                <span className="text-[#004D40]">innovatsion yechim!</span>
-              </h2>
+              <div className="mt-4 space-y-1">
+                <h2 className="text-[26px] md:text-[42px] font-extrabold leading-[1.1] text-[#1A1A1A] tracking-tight">
+                  Organizmni <br />
+                  <span className="text-[#004D40]">
+                    tozalash va tiklash
+                  </span>{" "}
+                  <br />
+                  vaqti keldi!
+                </h2>
+              </div>
             </div>
 
-            {/* Tavsif */}
-            <div className="flex items-start gap-4 max-w-[500px] bg-white/50 p-5 rounded-[25px] border-l-4 border-[#8BC34A] backdrop-blur-sm">
-              <p className="text-slate-600 text-[14px] md:text-[16px] leading-relaxed font-medium">
-                <span className="font-bold text-[#004D40]">
-                  100% tabiiy efir moylari
-                </span>{" "}
-                — organizmni parazitlardan tozalashda yuqori samaradorlik va
-                xavfsiz yondashuv. Artemisia (shuvoq) kuchi bilan sog'ligingizni
-                tiklang.
+            <div className="flex items-start gap-2 max-w-[380px] mb-8 border-l-4 border-[#8BC34A] pl-4">
+              <p className="text-[#1A1A1A] text-[13px] md:text-[15px] leading-relaxed font-medium opacity-80">
+                Shuvoq efir moyi asosidagi
+                <span className="text-[#004D40] font-bold">
+                  {" "}
+                  innovatsion tomchilar
+                </span>
+                — parazitlardan xalos bo'lishning eng xavfsiz yo'li.
               </p>
             </div>
 
-            {/* Xususiyatlar mini-grid */}
-            <div className="grid grid-cols-2 gap-4 w-full max-w-[450px]">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-green-100 flex items-center justify-center text-[#004D40]">
-                  <Droplets size={20} />
-                </div>
-                <span className="text-[11px] font-black uppercase tracking-wider text-slate-500">
-                  10ml hajmdagi tomchi
-                </span>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-green-100 flex items-center justify-center text-[#004D40]">
-                  <Leaf size={20} />
-                </div>
-                <span className="text-[11px] font-black uppercase tracking-wider text-slate-500">
-                  GMO va toksinsiz
-                </span>
-              </div>
-            </div>
-
-            {/* Tugmalar */}
-            <div className="flex flex-col sm:flex-row gap-4 w-full">
+            <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
               <button
                 onClick={() => setIsModalOpen(true)}
-                className="bg-[#004D40] text-white px-10 py-5 rounded-[22px] font-black text-[12px] md:text-[13px] uppercase tracking-[3px] hover:bg-green-800 shadow-xl shadow-green-900/20 transition-all active:scale-95 text-center"
+                className="bg-[#004D40] text-white px-8 py-4 rounded-full font-black text-[10px] md:text-[11px] uppercase tracking-widest hover:bg-[#8BC34A] shadow-xl shadow-green-900/20 transition-all active:scale-95 text-center"
               >
                 BUYURTMA BERISH
               </button>
               <button
                 onClick={() => setIsModalOpen(true)}
-                className="bg-white border-2 border-[#004D40] text-[#004D40] px-10 py-5 rounded-[22px] font-black text-[12px] md:text-[13px] uppercase tracking-[3px] hover:bg-green-50 transition-all active:scale-95 text-center"
+                className="bg-white border-2 border-[#1A1A1A] text-[#1A1A1A] px-8 py-4 rounded-full font-black text-[10px] md:text-[11px] uppercase tracking-widest hover:bg-[#1A1A1A] hover:text-white transition-all active:scale-95 text-center"
               >
-                MUTAXASSIS BILAN BOG'LANISH
+                KONSULTATSIYA
               </button>
             </div>
           </div>
 
-          {/* --- O'NG TOMON: MAHSULOT VIZUALI --- */}
-          <div className="w-full lg:w-[45%] relative mt-12 lg:mt-0">
-            <div className="relative w-full aspect-square md:aspect-[4/5] max-h-[600px] flex justify-center items-center">
-              {/* Markaziy doira (aura) */}
-              <div className="absolute w-[80%] h-[80%] bg-[#8BC34A]/10 rounded-full blur-[80px] animate-pulse" />
-
-              {/* Mahsulot qutisi va flakoni */}
-              <div className="relative w-full h-full animate-float">
+          {/* --- O'NG TOMON: KOMPOZITSIYA --- */}
+          <div className="w-full md:w-[45%] relative mt-10 md:mt-0 flex justify-center items-center">
+            <div className="relative w-full h-[350px] md:h-[500px]">
+              {/* 1-RASM: intro.png (Orqa fon/Katta rasm) */}
+              <div className="w-full h-full bg-green-50/30 rounded-[40px] overflow-hidden relative border border-green-100 shadow-inner z-10">
                 <Image
-                  src="/parazitoff-main.png" // ParazitOff qutisi va idishi rasmi
-                  alt="ParazitOff Gelmintlardan"
+                  src="/intro.png"
+                  alt="Background Context"
                   fill
-                  className="object-contain drop-shadow-[0_35px_60px_rgba(0,77,64,0.15)]"
+                  className="object-cover opacity-90"
                   priority
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-green-100/20 to-transparent" />
               </div>
 
-              {/* Badge (100% Tabiiy) */}
-              <div className="absolute top-10 right-4 md:right-10 z-20 w-24 h-24 md:w-32 md:h-32 rounded-full bg-white border-[6px] border-[#8BC34A] shadow-2xl flex flex-col items-center justify-center rotate-12 animate-bounce-slow">
-                <span className="text-[9px] md:text-[11px] font-black uppercase text-[#004D40]">
+              {/* 2-RASM: intro2.png (Mahsulot/Oldinda - Bottom Left joylashuv) */}
+              <div className="absolute -bottom-6 -left-4 md:-left-12 z-30 w-[180px] md:w-[280px] drop-shadow-[0_25px_50px_rgba(0,77,64,0.4)] transition-transform hover:scale-105 duration-500">
+                <div className="relative aspect-[0.9/1] rounded-[25px] border-[6px] border-white overflow-hidden shadow-2xl bg-white">
+                  <Image
+                    src="/intro2.png"
+                    alt="ParazitOFF Product"
+                    fill
+                    className="object-contain p-2"
+                  />
+                </div>
+              </div>
+
+              {/* Badge */}
+              <div className="absolute -top-6 -right-2 md:-right-6 z-30 w-24 h-24 md:w-32 md:h-32 rounded-full bg-[#8BC34A] border-[5px] border-white shadow-2xl flex flex-col items-center justify-center text-white rotate-12">
+                <span className="text-[9px] md:text-[11px] font-black uppercase tracking-tighter">
                   Faqat
                 </span>
-                <span className="text-2xl md:text-3xl font-[1000] text-[#8BC34A] leading-none my-1">
+                <span className="text-2xl md:text-4xl font-black leading-none my-0.5">
                   100%
                 </span>
-                <span className="text-[9px] md:text-[11px] font-black uppercase text-[#004D40]">
-                  Tabiiy
+                <span className="text-[10px] md:text-[12px] font-black uppercase tracking-tighter">
+                  TABIIY
+                </span>
+              </div>
+
+              {/* Mini xususiyat - Bottom Right */}
+              <div className="absolute bottom-8 right-4 z-30 bg-white/90 backdrop-blur px-4 py-2 rounded-2xl shadow-lg border border-green-50 flex items-center gap-2">
+                <Droplets className="text-[#004D40]" size={16} />
+                <span className="text-[10px] font-black text-[#004D40] uppercase">
+                  10ml Tomchi
                 </span>
               </div>
             </div>
@@ -123,12 +120,8 @@ export default function ParazitOffIntro() {
         </div>
       </div>
 
-      {/* Dekorativ barglar */}
-      <div className="absolute bottom-0 right-0 opacity-10 pointer-events-none translate-x-1/4 translate-y-1/4">
-        <Leaf size={400} fill="#004D40" />
-      </div>
-
       <OrderModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      <div className="absolute bottom-0 left-0 w-full h-1.5 bg-gradient-to-r from-transparent via-green-600/10 to-transparent" />
     </section>
   );
 }

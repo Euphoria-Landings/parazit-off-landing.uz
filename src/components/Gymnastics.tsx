@@ -7,25 +7,25 @@ export default function Results() {
     {
       title: "TOZALASH",
       subtitle: "ARTEMISIA KUCHI",
-      imgSrc: "/clean-card.png", // Parazitlardan tozalanishni ifodalovchi rasm
+      imgSrc: "/toza.png", // Parazitlardan tozalanishni ifodalovchi rasm
       color: "from-green-50 to-green-100",
     },
     {
       title: "TIKLASH",
       subtitle: "ICHAK MIKROFLORASI",
-      imgSrc: "/restore-card.png", // Sog'lom ichak yoki mikroflora rasmi
+      imgSrc: "/tiklash.png", // Sog'lom ichak yoki mikroflora rasmi
       color: "from-slate-50 to-slate-100",
     },
     {
       title: "HIMOYA",
       subtitle: "KUCHLI IMMUNITET",
-      imgSrc: "/protect-card.png", // Himoya qalqoni yoki sog'lom inson
+      imgSrc: "/ximoya.png", // Himoya qalqoni yoki sog'lom inson
       color: "from-green-100 to-green-200",
     },
   ];
 
   return (
-    <section id="results" className="w-full py-6 bg-white">
+    <section id="results" className="w-full py-3 bg-white">
       <div className="max-w-[1100px] mx-auto px-4">
         {/* SARLAVHA - PARAZITOFF USLUBIDA */}
         <div className="mb-12">

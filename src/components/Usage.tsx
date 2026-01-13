@@ -17,7 +17,7 @@ export default function Usage() {
   ];
 
   return (
-    <section id="usage" className="w-full py-16 bg-white overflow-hidden">
+    <section id="usage" className="w-full py-3 bg-white overflow-hidden">
       <div className="max-w-[1100px] mx-auto px-4 flex flex-col md:flex-row items-center gap-16">
         {/* CHAP TOMON: MATNLAR VA LOGOTIP */}
         <div className="w-full md:w-1/2 space-y-10">
@@ -76,7 +76,7 @@ export default function Usage() {
         <div className="w-full md:w-1/2 relative">
           <div className="relative h-[450px] md:h-[650px] w-full rounded-[50px] overflow-hidden shadow-2xl border-[8px] border-green-50/50">
             <Image
-              src="/usage-clean.png" // Sog'lom hayot tarzi yoki tomchini ishlatayotgan rasm
+              src="/right.png" // Sog'lom hayot tarzi yoki tomchini ishlatayotgan rasm
               alt="ParazitOff Lifestyle"
               fill
               className="object-cover transition-transform duration-700 hover:scale-105"
@@ -84,12 +84,7 @@ export default function Usage() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#004D40]/60 via-transparent to-transparent" />
 
-            <div className="absolute bottom-12 left-10 right-10">
-              <p className="text-white font-[1000] italic text-2xl md:text-3xl leading-tight uppercase tracking-tighter">
-                ICHKI <br /> <span className="text-[#8BC34A]">TOZALIK</span>{" "}
-                <br /> SOG'LIQ ASOSI
-              </p>
-            </div>
+      
           </div>
 
           {/* Floating Badge (Tomchilar soni) */}
