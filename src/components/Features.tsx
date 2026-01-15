@@ -3,13 +3,13 @@
 export default function Features() {
   const features = [
     {
-      text: "100% TABIIY EFIR MOYLARI MAJMUASI",
+      text: "organizmni tozalashni qo‘llab-quvvatlash",
     },
     {
-      text: "GELMINTLARGA QARSHI KUCHLI FORMULA",
+      text: "dori vositasi emas",
     },
     {
-      text: "GMO VA TOKSINLARDAN BUTUNLAY HOLI",
+      text: "organizmdagi parazitlarga qarshi kurashadi",
     },
   ];
 

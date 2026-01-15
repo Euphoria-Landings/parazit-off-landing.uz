@@ -31,24 +31,19 @@ export default function ParazitOffIntro() {
               </h1>
               <div className="mt-4 space-y-1">
                 <h2 className="text-[26px] md:text-[42px] font-extrabold leading-[1.1] text-[#1A1A1A] tracking-tight">
-                  Organizmni <br />
+               
                   <span className="text-[#004D40]">
-                    tozalash va tiklash
+                    organizmning tozaligi ichkaridan boshlanadi
                   </span>{" "}
                   <br />
-                  vaqti keldi!
+              
                 </h2>
               </div>
             </div>
 
             <div className="flex items-start gap-2 max-w-[380px] mb-8 border-l-4 border-[#8BC34A] pl-4">
               <p className="text-[#1A1A1A] text-[13px] md:text-[15px] leading-relaxed font-medium opacity-80">
-                Shuvoq efir moyi asosidagi
-                <span className="text-[#004D40] font-bold">
-                  {" "}
-                  innovatsion tomchilar
-                </span>
-                — parazitlardan xalos bo'lishning eng xavfsiz yo'li.
+             100% tabiiy efir moylari bu organizmning tabiiy tozalanish jarayonlarini qo‘llab-quvvatlash uchun ishlab chiqilgan oziq-ovqatga qo‘shiladigan biologik faol qo‘shimcha. Faol o‘simlik komponentlari parazitar yuklamani kamaytirishga va organizmning ichki muvozanatini saqlashga yordam beradi.
               </p>
             </div>
 
@@ -85,7 +80,7 @@ export default function ParazitOffIntro() {
 
               {/* 2-RASM: intro2.png (Mahsulot/Oldinda - Bottom Left joylashuv) */}
               <div className="absolute -bottom-6 -left-4 md:-left-12 z-30 w-[180px] md:w-[280px] drop-shadow-[0_25px_50px_rgba(0,77,64,0.4)] transition-transform hover:scale-105 duration-500">
-                <div className="relative aspect-[0.9/1] rounded-[25px] border-[6px] border-white overflow-hidden shadow-2xl bg-white">
+                <div className="relative aspect-[0.9/1] rounded-[25px]  border-white overflow-hidden shadow-2xl">
                   <Image
                     src="/intro2.png"
                     alt="ParazitOFF Product"

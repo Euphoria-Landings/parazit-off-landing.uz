@@ -5,7 +5,7 @@ import { Leaf, ShieldCheck, Zap, Droplets } from "lucide-react";
 export default function Purchase() {
   const cards = [
     {
-      title: "TO'LIQ DETOKS",
+      title: "kattalarga tavsiya etilishi mumkin",
       desc: "Organizmni parazitlar, toksinlar va zararli chiqindilardan tabiiy va xavfsiz tozalashga yordam beradi.",
       icon: <ShieldCheck className="w-12 h-12 text-[#8BC34A]" />,
     },

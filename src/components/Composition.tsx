@@ -5,20 +5,20 @@ import { Leaf, CheckCircle, Droplets } from "lucide-react";
 export default function Composition() {
   const mainFeatures = {
     benefits: [
-      "ORGANIZMNI PARAZITLARDAN TO'LIQ TOZALAYDI",
-      "TOKSINLAR VA CHIQINDILARNI CHIQARADI",
-      "IMMUNITETNI QAYTA TIKLAYDI",
+      "organizmni tozalashga yordam beradi",
+      "parazitlar uchun noqulay muhit yaratishga yordam beradi",
+      "oshqozon-ichak trakti faoliyatini qo‘llab-quvvatlaydi",
     ],
     components: [
       "ARTEMISIA (SHUVOQ) EFIR MOYI",
-      "CINA BERG TABIIY EKSTRAKTI",
-      "100% TABIIY SEZAM MOYI",
+      "Artemisia 25%",
+      "Sezam moyi 75%",
     ],
   };
 
   const formulaData = [
-    { name: "ARTEMISIA", desc: "25% KONTSENTRAT" },
-    { name: "CINA BERG", desc: "75% EKSTRAKT" },
+    { name: "Achchiq", desc: "shuvoq moyi" },
+    { name: "Artemisia", desc: "25% EKSTRAKT" },
     { name: "SEZAM", desc: "100% TABIIY MOY" },
     { name: "FORMULA", desc: "TOZALASH KUCHI" },
   ];

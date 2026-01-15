@@ -5,9 +5,9 @@ import { Leaf } from "lucide-react";
 export default function Results() {
   const resultCards = [
     {
-      title: "TOZALASH",
-      subtitle: "ARTEMISIA KUCHI",
-      imgSrc: "/toza.png", // Parazitlardan tozalanishni ifodalovchi rasm
+      title: "ParazitOFF",
+      subtitle: "ishlash prinsipi",
+      imgSrc: "/parazit.png", // Parazitlardan tozalanishni ifodalovchi rasm
       color: "from-green-50 to-green-100",
     },
     {
